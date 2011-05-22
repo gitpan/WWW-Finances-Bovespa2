@@ -3,7 +3,7 @@ use Moose;
 use WWW::Mechanize;
 use XML::XPath;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 has [ qw/descricao codigo ibovespa delay data hora oscilacao valor_ultimo quant_neg mercado bovespa_response/ ] => ( is => 'rw' , isa => 'Str' );
@@ -80,7 +80,7 @@ __END__
 
 =head1 NAME
 
-WWW::Finances::Bovespa2 - 	Use WWW::Finances::Bovespa to access stock options values directly from bovespa ( w/ 15min lag ).
+WWW::Finances::Bovespa2
 
 =head1 SYNOPSIS
 
@@ -111,12 +111,12 @@ WWW::Finances::Bovespa2 - 	Use WWW::Finances::Bovespa to access stock options va
 =head2 WWW::Finances::Bovespa2->new()
   
   Creates a new empty WWW::Finances::Bovespa2 object.
-  Use WWW::Finances::Bovespa2->find( 'foo' ) to retrieve data.
+  Use WWW::Finances::Bovespa2->find( { codigo => 'foo' } ) to retrieve data.
 
-=head2 WWW::Finances::Bovespa2->find( 'foo' )
+=head2 WWW::Finances::Bovespa2->find( { codigo => 'foo' } )
 
-  Will attempt to fetch data from bovespa. 
-  Use valid codes. See the codes at http://www.bmfbovespa.com.br .
+  Attempts to retrieve data from bovespa based on the code/codigo. 
+  To see a list of valid codes, search at http://www.bmfbovespa.com.br .
 
 =head2 is_valid
 
@@ -164,7 +164,7 @@ WWW::Finances::Bovespa2 - 	Use WWW::Finances::Bovespa to access stock options va
   
 =head1 BUGS
 
-  Please report any... and/or patches welcome
+  Please report any... 
 
 =head1 SUPPORT
 
