@@ -5,7 +5,7 @@ WriteMakefile(
     NAME         => 'WWW::Finances::Bovespa2',
     VERSION_FROM => 'lib/WWW/Finances/Bovespa2.pm', # finds \$VERSION
     AUTHOR       => 'Hernan Lopes (hernanlopes@gmail.com)',
-    ABSTRACT     => 'Use WWW::Finances::Bovespa2 to access stock options values directly from bovespa ( w/ 15min lag ).',
+    ABSTRACT     => 'Reads stock options values from bovespa ( with 15min lag ).',
     PREREQ_PM    => {
                      'Test::Simple' => 0.44,
                      'Moose' => 0,

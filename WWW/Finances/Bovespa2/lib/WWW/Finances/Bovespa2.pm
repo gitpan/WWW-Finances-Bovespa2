@@ -80,7 +80,7 @@ __END__
 
 =head1 NAME
 
-WWW::Finances::Bovespa2
+  WWW::Finances::Bovespa2 Reads stock options values from bovespa ( with 15 minutes lag )
 
 =head1 SYNOPSIS
 
